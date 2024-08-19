@@ -43,7 +43,19 @@ namespace Charpad
             editor.Width = screenWidth;
             editor.Height = screenHeight;
 
-
+            if (App.CommandLineArgs.Length > 0)
+            {
+                string filePath = App.CommandLineArgs[0];
+                if (File.Exists(filePath))
+                {
+                    currentFilePath = filePath;
+                    editor.Text = File.ReadAllText(currentFilePath);
+                }
+                else
+                {
+                    MessageBox.Show("not found " + filePath);
+                }
+            }
         }
 
         private void LoadFonts(object sender, RoutedEventArgs e)

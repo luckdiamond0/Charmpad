@@ -111,7 +111,7 @@
                          VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
                          TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                 </Grid>
-            </DockPanel>
+       </DockPanel>
     </Grid>
    </Border>
 </Window>
