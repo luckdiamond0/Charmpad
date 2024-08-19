@@ -7,16 +7,16 @@ CharmPad is a project developed to [briefly describe the purpose of the project,
 Here are some screenshots of CharmPad:
 
 ### Main 
-![Main Screen](https://ibb.co/7zHtgJr)
+![Main Screen](https://i.ibb.co/BPm24VT/charmpad.png)
 
 ### Find Window
-![Find Window](https://ibb.co/xJTKBYc)
+![Find Window](https://i.ibb.co/4PrwX2D/find.png)
 
 ### Settings
-![Settings](https://ibb.co/sJYpPcL)
+![Settings](https://i.ibb.co/Tq3DTJz/fontchanger.png)
 
 ### Text Selected
-![Selected](https://ibb.co/ZHgYv4w)
+![Selected](https://i.ibb.co/7gpRBMT/select.png)
 
 ## Features
 
