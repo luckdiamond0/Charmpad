@@ -1,0 +1,81 @@
+﻿<Window x:Class="Charpad.FindReplaceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Charpad"
+        mc:Ignorable="d"
+        Background="#06060A"
+        ResizeMode="NoResize"
+        Height="210" Width="450">
+    <Window.Resources>
+
+
+        <Style TargetType="TabControl">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="FocusVisualStyle">
+                <Setter.Value>
+                    <Style>
+                        <Setter Property="Control.Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Control">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ContentPresenter />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#C7C7F7"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <!-- Adiciona a imagem de fundo -->
+        <Image Source="/charmslogo.png" Width="100">
+            <Image.Effect>
+                <DropShadowEffect Color="#A569FF" ShadowDepth="0" BlurRadius="16.6" Opacity="0.2" />
+            </Image.Effect>
+        </Image>
+        <!-- Adiciona os controles sobre a imagem -->
+        <TabControl Margin="10" Background="Transparent">
+            <TabItem Header="Find" Background="#C7C7F7">
+                <StackPanel Margin="10" Background="Transparent">
+                    <Grid>
+                        <TextBlock Text="Enter text to find" IsHitTestVisible="False" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="Black" Visibility="Collapsed" x:Name="findPlaceholder"/>
+                        <TextBox Name="findTextBox" Margin="0,0,0,10" GotFocus="FindTextBox_GotFocus" LostFocus="FindTextBox_LostFocus" Background="#06060A" BorderBrush="#7D50C1" Foreground="White"/>            
+                    </Grid>
+                    <Button Content="Find Next" Width="100" Click="FindNext_Click" Background="#C7C7F7"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Replace" Background="#C7C7F7">
+                <StackPanel Margin="10" Background="Transparent">
+                    <Grid>
+                        <TextBox Name="findReplaceTextBox" Margin="0,0,0,10" GotFocus="FindReplaceTextBox_GotFocus" LostFocus="FindReplaceTextBox_LostFocus" Background="#06060A" BorderBrush="#7D50C1" Foreground="White"/>
+                        <TextBlock Text="Enter text to find" IsHitTestVisible="False" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="Gray" Visibility="Collapsed" x:Name="replaceFindPlaceholder"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,10">
+                        <TextBox Name="replaceTextBox" Margin="0,0,0,10" GotFocus="ReplaceTextBox_GotFocus" LostFocus="ReplaceTextBox_LostFocus" Background="#06060A" BorderBrush="#7D50C1" Foreground="White"/>
+                        <TextBlock Text="Enter text to replace with" IsHitTestVisible="False" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="Gray" Visibility="Collapsed" x:Name="replacePlaceholder"/>
+                    </Grid>
+                    <Button Content="Replace All" Width="100" Click="ReplaceAll_Click" Background="#C7C7F7"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
