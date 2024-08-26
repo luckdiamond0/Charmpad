@@ -47,7 +47,7 @@
     </Window.Resources>
     <Grid>
         <!-- Adiciona a imagem de fundo -->
-        <Image Source="/charmslogo.png" Width="100">
+        <Image Source="/charmslogo.png" Width="100" Opacity="0.60"> 
             <Image.Effect>
                 <DropShadowEffect Color="#A569FF" ShadowDepth="0" BlurRadius="16.6" Opacity="0.2" />
             </Image.Effect>
@@ -67,11 +67,11 @@
                 <StackPanel Margin="10" Background="Transparent">
                     <Grid>
                         <TextBox Name="findReplaceTextBox" Margin="0,0,0,10" GotFocus="FindReplaceTextBox_GotFocus" LostFocus="FindReplaceTextBox_LostFocus" Background="#06060A" BorderBrush="#7D50C1" Foreground="White"/>
-                        <TextBlock Text="Enter text to find" IsHitTestVisible="False" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="Gray" Visibility="Collapsed" x:Name="replaceFindPlaceholder"/>
+                        <TextBlock Text="Enter text to find" IsHitTestVisible="False" Margin="5,-12,0,0" VerticalAlignment="Center" Foreground="Gray" Visibility="Collapsed" x:Name="replaceFindPlaceholder"/>
                     </Grid>
                     <Grid Margin="0,0,0,10">
                         <TextBox Name="replaceTextBox" Margin="0,0,0,10" GotFocus="ReplaceTextBox_GotFocus" LostFocus="ReplaceTextBox_LostFocus" Background="#06060A" BorderBrush="#7D50C1" Foreground="White"/>
-                        <TextBlock Text="Enter text to replace with" IsHitTestVisible="False" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="Gray" Visibility="Collapsed" x:Name="replacePlaceholder"/>
+                        <TextBlock Text="Enter text to replace with" IsHitTestVisible="False" Margin="5,-12,0,0" VerticalAlignment="Center" Foreground="Gray" Visibility="Collapsed" x:Name="replacePlaceholder"/>
                     </Grid>
                     <Button Content="Replace All" Width="100" Click="ReplaceAll_Click" Background="#C7C7F7"/>
                 </StackPanel>

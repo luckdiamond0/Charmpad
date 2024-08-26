@@ -84,5 +84,10 @@ namespace Charpad
                 replacePlaceholder.Visibility = Visibility.Visible;
             }
         }
+
+        private void findReplaceTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

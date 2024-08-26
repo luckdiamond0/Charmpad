@@ -19,13 +19,11 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
-
-
     </Window.Resources>
     <Grid>
 
         <!-- Image placed in the Grid with TextBox -->
-        <Image Source="/charmslogo.png" Width="150">
+        <Image Source="/charmslogo.png" Width="150" Opacity="0.60">
             <Image.Effect>
                 <DropShadowEffect Color="#A569FF" ShadowDepth="0" BlurRadius="16.6" Opacity="0.2" />
             </Image.Effect>

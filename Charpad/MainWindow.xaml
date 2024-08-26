@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Background="#06060A"
         Title="Charmpad" Height="450" Width="800">
+    <!-- CommandBindings to link commands to their handlers -->
+    <Window.CommandBindings>
+        <CommandBinding Command="Find" Executed="Find_Click"/>
+        <CommandBinding Command="Replace" Executed="Replace_Click"/>
+    </Window.CommandBindings>
+
+    <!-- InputBindings to set up keyboard shortcuts -->
+    <Window.InputBindings>
+        <KeyBinding Command="Find" Key="F" Modifiers="Control"/>
+        <KeyBinding Command="Replace" Key="F" Modifiers="Control+Shift"/>
+    </Window.InputBindings>
     <Window.Resources>
         <Style TargetType="Menu">
             <Setter Property="Background" Value="#06060A"/>
@@ -81,8 +92,8 @@
         </Border.Effect>
         <Grid>
         <DockPanel>
-            <Menu DockPanel.Dock="Top" Background="#06060A">
-                <MenuItem Header="File" Foreground="White">
+                <Menu DockPanel.Dock="Top" Background="#06060A">
+                    <MenuItem Header="File" Foreground="White">
                     <MenuItem Header="New" Click="NewFile_Click"/>
                     <MenuItem Header="Open" Click="OpenFile_Click"/>
                     <MenuItem Header="Save" Click="SaveFile_Click"/>
