@@ -1,6 +1,6 @@
 # CharmPad
 
-CharmPad is a project developed to CharmPad is a project developed to try to be better than Windows Notepad, I know that in the current version there are some things missing, etc., but I will try to make it as good as possible!.
+CharmPad is a project developed to try to be better than Windows Notepad, I know that in the current version there are some things missing, etc., but I will try to make it as good as possible!.
 
 ## Images
 
